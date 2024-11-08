@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gesture Recognition</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Navigate the Gesture Landscape</h1>
+    <p>Upload up to 5 images to recognize common gestures and phrases.</p>
+  </header>
+
+  <main>
+    <section class="upload-section">
+      <!-- Форма завантаження файлів із можливістю вибору кількох зображень -->
+      <form id="uploadForm">
+        <input type="file" id="fileInput" name="images" accept="image/*" multiple> <!-- Додає можливість вибору кількох файлів -->
+        <button type="submit">Upload Images</button>
+      </form>
+      <!-- Виведення статусу завантаження -->
+      <p id="status">Status: Waiting for upload...</p>
+    </section>
+
+    <section class="results-section">
+      <h2>Recognized Gestures:</h2>
+      <!-- Виведення результатів розпізнавання жестів -->
+      <p id="result">No gestures recognized yet.</p>
+    </section>
+
+    <!-- Секція для повідомлення про успіх -->
+    <section id="success-message" class="message success" style="display:none;">
+      <p>Images uploaded successfully!</p>
+    </section>
+
+    <!-- Секція для повідомлення про помилки -->
+    <section id="error-message" class="message error" style="display:none;">
+      <p>Error occurred during upload. Please try again.</p>
+    </section>
+
+    <div id="loader" class="loader" style="display: none;"></div>
+
+  </main>
+
+  <script src="index.js"></script> <!-- Підключення JavaScript-файлу для обробки завантаження -->
+</body>
+</html>
